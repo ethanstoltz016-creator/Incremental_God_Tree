@@ -216,7 +216,9 @@ addLayer("c", {
 
         hotkeys: [
             {key: "c", description: "C: reset for lollipops or whatever", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
-            {key: "ctrl+c", description: "Ctrl+c: respec things", onPress(){respecBuyables(this.layer)}, unlocked() {return hasUpgrade('c', '22')}}  ,
+            {key: "ctrl+c", description: "Ctrl+c: respec things", onPress(){respecBuyables(this.layer)}, unlocked() {return hasUpgrade('c', '22')}},
+			{key: "x", description: "X: crypto reset", onPress(){cryptoreset()}},
+			{key: "v", description: "V: code reset", onPress(){codereset()}},
         ],
         increaseUnlockOrder: [], // Array of layer names to have their order increased when this one is first unlocked
 
