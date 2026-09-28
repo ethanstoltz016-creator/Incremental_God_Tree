@@ -571,6 +571,22 @@
     row: "side", // Row the layer is in on the tree (0 is the first row)
     tooltip: "Incremental", // Row the layer is in on the tree (0 is the first row)
     displayRow: 1, // Row the layer is in on the tree (0 is the first row)
+    hotkeys: [
+        {
+            key: "c",
+            description: "c: reset for crypto",
+            onPress() {
+                if (player.i.unlocked && player.i.cryptotoget.gte(1)) layers.i.cryptoreset()
+            },
+        },
+        {
+            key: "v",
+            description: "v: reset for code experience",
+            onPress() {
+                if (player.i.unlocked && player.i.codeexperiencetoget.gte(1)) layers.i.codereset()
+            },
+        }
+    ],
     update(delta) {
         let timestop = new Decimal(1)
 
